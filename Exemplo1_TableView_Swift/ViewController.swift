@@ -12,6 +12,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var minhaTabView: UITableView!
     
+    var animal = ["Urso", "Leão", "Rinoceronte", "Girafa", "Elefante"]
+    var images = ["urso.png", "leao.png", "rino.png", "girafa.png", "ele.png"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +27,54 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        <#code#>
+        return 1
     }
-
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return animal.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let celula = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        celula.textLabel?.text = "\(animal[indexPath.row])"
+        celula.imageView?.image = UIImage(named: "\(images[indexPath.row])")
+        return celula
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var msg: String
+        msg = "Selecionamos o animal \(animal[indexPath.row])"
+        
+        let alerta = UIAlertController(
+            title: "Aviso",
+            message: msg,
+            preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alerta.addAction(UIAlertAction(
+            title: "OK",
+            style: UIAlertActionStyle.Default,
+            handler: nil))
+        
+        presentViewController(alerta, animated: true, completion: nil)
+    }
+    
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let rodape = UIImageView(image: UIImage(named: "rodape"))
+        return rodape
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIImageView(image: UIImage(named: "cabecalho"))
+        return header
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 75
+    }
 
 }
 
