@@ -12,7 +12,7 @@
 		ACAAA0C71D62A01100079464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAA0C51D62A01100079464 /* Main.storyboard */; };
 		ACAAA0C91D62A01100079464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAAA0C81D62A01100079464 /* Assets.xcassets */; };
 		ACAAA0CC1D62A01100079464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAAA0CA1D62A01100079464 /* LaunchScreen.storyboard */; };
-		ACAAA0D41D62A2CD00079464 /* AtletaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAA0D31D62A2CD00079464 /* AtletaTableViewController.swift */; };
+		ACF360A71D750B8F00515C13 /* AtletaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF360A61D750B8F00515C13 /* AtletaTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		ACAAA0C81D62A01100079464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACAAA0CB1D62A01100079464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACAAA0CD1D62A01100079464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACAAA0D31D62A2CD00079464 /* AtletaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtletaTableViewController.swift; sourceTree = "<group>"; };
+		ACF360A61D750B8F00515C13 /* AtletaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtletaTableViewController.swift; path = ../AtletaTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +56,10 @@
 		ACAAA0C01D62A01100079464 /* Atletas */ = {
 			isa = PBXGroup;
 			children = (
+				ACF360A61D750B8F00515C13 /* AtletaTableViewController.swift */,
 				ACAAA0C11D62A01100079464 /* AppDelegate.swift */,
 				ACAAA0C31D62A01100079464 /* ViewController.swift */,
 				ACAAA0C51D62A01100079464 /* Main.storyboard */,
-				ACAAA0D31D62A2CD00079464 /* AtletaTableViewController.swift */,
 				ACAAA0C81D62A01100079464 /* Assets.xcassets */,
 				ACAAA0CA1D62A01100079464 /* LaunchScreen.storyboard */,
 				ACAAA0CD1D62A01100079464 /* Info.plist */,
@@ -140,7 +140,7 @@
 			files = (
 				ACAAA0C41D62A01100079464 /* ViewController.swift in Sources */,
 				ACAAA0C21D62A01100079464 /* AppDelegate.swift in Sources */,
-				ACAAA0D41D62A2CD00079464 /* AtletaTableViewController.swift in Sources */,
+				ACF360A71D750B8F00515C13 /* AtletaTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +290,7 @@
 				ACAAA0D21D62A01100079464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
